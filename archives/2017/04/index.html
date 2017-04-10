@@ -89,7 +89,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="自言自语">
-<meta property="og:url" content="http://chagn7z.github.io/index.html">
+<meta property="og:url" content="http://chagn7z.github.io/archives/2017/04/index.html">
 <meta property="og:site_name" content="自言自语">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自言自语">
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://chagn7z.github.io/"/>
+  <link rel="canonical" href="http://chagn7z.github.io/archives/2017/04/"/>
 
 
 
 
 
-  <title> 自言自语 </title>
+  <title> Archiv | 自言自语 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -151,9 +151,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -236,139 +234,67 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
+
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      Öhm..! Ein Artikel. Bleib dran.
+    </span>
+
     
+
+      
+      
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chagn7z.github.io/2017/04/10/bing-wallpaper-download/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="c7">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="自言自语">
-    </span>
-
-    
-      <header class="post-header">
-
+      
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/10/bing-wallpaper-download/" itemprop="url">
-                  必应的每日壁纸下载
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T22:30:09+08:00">
-                2017-04-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
       
       
 
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-          
-            <h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><ul>
-<li>使用浏览器打开 <code>cn.bing.com</code> ，按下 <code>F12</code> 进入调试界面，并切换到网络选项页。</li>
-<li><p>刷新页面，捕获到浏览器的请求。找到以下请求：<br>  <code>http://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1&amp;nc=1491830740475&amp;pid=hp</code><br>  其返回信息为：<br>  <code>{&quot;images&quot;:[{&quot;startdate&quot;:&quot;20170409&quot;,&quot;fullstartdate&quot;:&quot;201704091600&quot;,&quot;enddate&quot;:&quot;20170410&quot;,&quot;url&quot;:&quot;/az/hprichbg/rb/ArcticFoxSibs_ZH-CN7417451993_1920x1080.jpg&quot;,&quot;urlbase&quot;:&quot;/az/hprichbg/rb/ArcticFoxSibs_ZH-CN7417451993&quot;,&quot;copyright&quot;:&quot;弗兰格尔岛上的北极狐，俄罗斯 (© Owen Newman/Getty Images)&quot;,&quot;copyrightlink&quot;:&quot;/search?q=%e5%8c%97%e6%9e%81%e7%8b%90%e7%8b%b8&amp;form=hpcapt&amp;mkt=zh-cn&quot;,&quot;quiz&quot;:&quot;/search?q=Bing+homepage+quiz&amp;filters=WQOskey:%22HPQuiz_20170409_ArcticFoxSibs%22&amp;FORM=HPQUIZ&quot;,&quot;wp&quot;:false,&quot;hsh&quot;:&quot;faacad1474cf10a8d5f6f5faf75f037e&quot;,&quot;drk&quot;:1,&quot;top&quot;:1,&quot;bot&quot;:1,&quot;hs&quot;:[]}]}</code></p>
-<p>  判断为获取图片地址的请求，分析后发现通过配置不同的参数就能得到最终的图片地址：</p>
-<pre><code>- idx -&gt; 已今天为起始的天数索引，向前增加，取值范围 `0-8`
-- nc -&gt; 十三位的时间戳，标示当前日期时间
-- n -&gt; 返回的数据长度，即从起始日期开始的天数长度
-</code></pre></li>
-</ul>
-<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>使用 <code>python</code> 构造请求下载即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">import time</div><div class="line">import requests</div><div class="line"></div><div class="line">IMG_PATH = &apos;/home/usr/bing&apos;</div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">	nc  = int(time.time() * 1000)</div><div class="line">	n   = 8</div><div class="line">	idx = 0</div><div class="line">	post_url = &apos;http://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=%d&amp;n=%d&amp;nc=%d&amp;pid=hp&apos; % (idx, n, nc)</div><div class="line"></div><div class="line">	res = requests.get(post_url)</div><div class="line">	urls = []</div><div class="line">	if res:</div><div class="line">		img_json = res.json()</div><div class="line">		for row in img_json[&apos;images&apos;]:</div><div class="line">			name = row[&apos;url&apos;].rfind(&apos;/rb/&apos;)</div><div class="line">			urls.append([row[&apos;startdate&apos;], row[&apos;url&apos;].split(&apos;/&apos;)[-1], &apos;http://cn.bing.com&apos; + row[&apos;url&apos;]])</div><div class="line"></div><div class="line">	for img in urls:</div><div class="line">		res = requests.get(img[-1])</div><div class="line">		with open(IMG_PATH+&apos;/[&apos;+img[0]+&apos;]&apos;+img[1], &apos;w&apos;) as fd:</div><div class="line">			fd.write(res.content)</div></pre></td></tr></table></figure>
-
-          
+            <a class="post-title-link" href="/2017/04/10/bing-wallpaper-download/" itemprop="url">
+              
+                <span itemprop="name">必应的每日壁纸下载</span>
+              
+            </a>
         
-      
-    </div>
+      </h1>
 
-    <div>
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-04-10T22:30:09+08:00"
+              content="2017-04-10" >
+          04-10
+        </time>
+      </div>
 
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </header>
   </article>
 
 
+
     
+
   </section>
 
   
+
 
           
           </div>
@@ -545,6 +471,12 @@
   
 
   
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
+
 
   
 

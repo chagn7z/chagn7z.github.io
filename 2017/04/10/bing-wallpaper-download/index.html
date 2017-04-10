@@ -87,12 +87,22 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="自言自语">
-<meta property="og:url" content="http://chagn7z.github.io/index.html">
+<meta name="description" content="分析
+使用浏览器打开 cn.bing.com ，按下 F12 进入调试界面，并切换到网络选项页。
+刷新页面，捕获到浏览器的请求。找到以下请求：  http://cn.bing.com/HPImageArchive.aspx?format=js&amp;amp;idx=0&amp;amp;n=1&amp;amp;nc=1491830740475&amp;amp;pid=hp  其返回信息为：  {&amp;quot;images&amp;quot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="必应的每日壁纸下载">
+<meta property="og:url" content="http://chagn7z.github.io/2017/04/10/bing-wallpaper-download/index.html">
 <meta property="og:site_name" content="自言自语">
+<meta property="og:description" content="分析
+使用浏览器打开 cn.bing.com ，按下 F12 进入调试界面，并切换到网络选项页。
+刷新页面，捕获到浏览器的请求。找到以下请求：  http://cn.bing.com/HPImageArchive.aspx?format=js&amp;amp;idx=0&amp;amp;n=1&amp;amp;nc=1491830740475&amp;amp;pid=hp  其返回信息为：  {&amp;quot;images&amp;quot">
+<meta property="og:updated_time" content="2017-04-10T14:30:09.500Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自言自语">
+<meta name="twitter:title" content="必应的每日壁纸下载">
+<meta name="twitter:description" content="分析
+使用浏览器打开 cn.bing.com ，按下 F12 进入调试界面，并切换到网络选项页。
+刷新页面，捕获到浏览器的请求。找到以下请求：  http://cn.bing.com/HPImageArchive.aspx?format=js&amp;amp;idx=0&amp;amp;n=1&amp;amp;nc=1491830740475&amp;amp;pid=hp  其返回信息为：  {&amp;quot;images&amp;quot">
 
 
 
@@ -120,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://chagn7z.github.io/"/>
+  <link rel="canonical" href="http://chagn7z.github.io/2017/04/10/bing-wallpaper-download/"/>
 
 
 
 
 
-  <title> 自言自语 </title>
+  <title> 必应的每日壁纸下载 | 自言自语 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -151,9 +161,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -236,9 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -268,10 +276,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/04/10/bing-wallpaper-download/" itemprop="url">
-                  必应的每日壁纸下载
-                </a>
+                必应的每日壁纸下载
               
             
           </h1>
@@ -322,9 +327,7 @@
       
 
       
-        
-          
-            <h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><ul>
+        <h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><ul>
 <li>使用浏览器打开 <code>cn.bing.com</code> ，按下 <code>F12</code> 进入调试界面，并切换到网络选项页。</li>
 <li><p>刷新页面，捕获到浏览器的请求。找到以下请求：<br>  <code>http://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1&amp;nc=1491830740475&amp;pid=hp</code><br>  其返回信息为：<br>  <code>{&quot;images&quot;:[{&quot;startdate&quot;:&quot;20170409&quot;,&quot;fullstartdate&quot;:&quot;201704091600&quot;,&quot;enddate&quot;:&quot;20170410&quot;,&quot;url&quot;:&quot;/az/hprichbg/rb/ArcticFoxSibs_ZH-CN7417451993_1920x1080.jpg&quot;,&quot;urlbase&quot;:&quot;/az/hprichbg/rb/ArcticFoxSibs_ZH-CN7417451993&quot;,&quot;copyright&quot;:&quot;弗兰格尔岛上的北极狐，俄罗斯 (© Owen Newman/Getty Images)&quot;,&quot;copyrightlink&quot;:&quot;/search?q=%e5%8c%97%e6%9e%81%e7%8b%90%e7%8b%b8&amp;form=hpcapt&amp;mkt=zh-cn&quot;,&quot;quiz&quot;:&quot;/search?q=Bing+homepage+quiz&amp;filters=WQOskey:%22HPQuiz_20170409_ArcticFoxSibs%22&amp;FORM=HPQUIZ&quot;,&quot;wp&quot;:false,&quot;hsh&quot;:&quot;faacad1474cf10a8d5f6f5faf75f037e&quot;,&quot;drk&quot;:1,&quot;top&quot;:1,&quot;bot&quot;:1,&quot;hs&quot;:[]}]}</code></p>
 <p>  判断为获取图片地址的请求，分析后发现通过配置不同的参数就能得到最终的图片地址：</p>
@@ -336,16 +339,20 @@
 <h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>使用 <code>python</code> 构造请求下载即可。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">import time</div><div class="line">import requests</div><div class="line"></div><div class="line">IMG_PATH = &apos;/home/usr/bing&apos;</div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">	nc  = int(time.time() * 1000)</div><div class="line">	n   = 8</div><div class="line">	idx = 0</div><div class="line">	post_url = &apos;http://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=%d&amp;n=%d&amp;nc=%d&amp;pid=hp&apos; % (idx, n, nc)</div><div class="line"></div><div class="line">	res = requests.get(post_url)</div><div class="line">	urls = []</div><div class="line">	if res:</div><div class="line">		img_json = res.json()</div><div class="line">		for row in img_json[&apos;images&apos;]:</div><div class="line">			name = row[&apos;url&apos;].rfind(&apos;/rb/&apos;)</div><div class="line">			urls.append([row[&apos;startdate&apos;], row[&apos;url&apos;].split(&apos;/&apos;)[-1], &apos;http://cn.bing.com&apos; + row[&apos;url&apos;]])</div><div class="line"></div><div class="line">	for img in urls:</div><div class="line">		res = requests.get(img[-1])</div><div class="line">		with open(IMG_PATH+&apos;/[&apos;+img[0]+&apos;]&apos;+img[1], &apos;w&apos;) as fd:</div><div class="line">			fd.write(res.content)</div></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -354,21 +361,22 @@
       
 
       
-
+        
       
 
       
+
       
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -376,6 +384,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -395,8 +407,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -440,6 +461,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分析"><span class="nav-number">1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载"><span class="nav-number">2.</span> <span class="nav-text">下载</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -545,6 +582,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
